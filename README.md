@@ -29,8 +29,9 @@ Every 7th day is a review-and-challenge day with no new words.
 Parents → *His voice* lists them by day: ▶ plays his recording, 🔊 the model voice, plus what the checker understood.
 Recordings stay in this browser and are not part of the backup file.
 
-**Male & female sector (الْمُذَكَّرُ وَالْمُؤَنَّثُ):** pairs such as قِطٌّ / قِطَّةٌ, أَسَدٌ / لَبُؤَةٌ, ثَوْرٌ / بَقَرَةٌ,
-مُعَلِّمٌ / مُعَلِّمَةٌ. New-word cards show the partner word, and these words get a "مُذَكَّرٌ أَمْ مُؤَنَّثٌ؟" game.
+**Male & female sector (الْمُذَكَّرُ وَالْمُؤَنَّثُ):** only pairs people really use: people
+(مُعَلِّمٌ / مُعَلِّمَةٌ, طَبِيبٌ / طَبِيبَةٌ, وَلَدٌ / بِنْتٌ ...) and animals whose male and female have different names
+(دِيكٌ / دَجَاجَةٌ, ثَوْرٌ / بَقَرَةٌ, جَمَلٌ / نَاقَةٌ, كَبْشٌ / نَعْجَةٌ). No "female cat"-style words. New-word cards show the partner word, and these words get a "مُذَكَّرٌ أَمْ مُؤَنَّثٌ؟" game.
 
 ## The plan (26 weeks)
 | Stage | Weeks | New words/day | Sentences (5 a day) |
@@ -41,8 +42,8 @@ Recordings stay in this browser and are not part of the backup file.
 | 🌳 4 Tree | 17–22 | 10 | 8–12 words |
 | 🍎 5 Fruit | 23–26 | 10 | short paragraphs |
 
-**Content status:** 223 words across 18 sectors and 223 sentences are ready. At 10 new words a day they last
-about 26 program days (~4 weeks); after that the days are review-only until more words are added.
+**Content status:** 217 words across 18 sectors and 217 sentences are ready. At 10 new words a day they last
+about 25 program days (~4 weeks); after that the days are review-only until more words are added.
 Stages 3–5 (verbs, adjectives, longer sentences, short stories) are the next batch to add.
 
 ## Adding or editing content

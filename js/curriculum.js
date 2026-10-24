@@ -16,7 +16,7 @@ window.Curriculum = (function () {
   ];
   // Leitner box → sessions until next review. Box 5+ counts as "mastered".
   var INTERVALS = [0, 1, 2, 4, 7, 14, 30];
-  var PLAN_V = 2; // bump when the shape of a day changes, so a saved half-done plan is rebuilt
+  var PLAN_V = 3; // bump when the shape of a day changes, so a saved half-done plan is rebuilt
 
   var wordById = {};
   WORDS.forEach(function (w) { wordById[w.id] = w; });

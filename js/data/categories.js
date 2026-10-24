@@ -1,0 +1,20 @@
+// Vocabulary sectors. Order matters: new words rotate through categories in this order.
+window.CATEGORIES = [
+  { id: 'animals', ar: 'الْحَيَوَانَاتُ', en: 'Animals', icon: '🐾' },
+  { id: 'family', ar: 'الْعَائِلَةُ وَالنَّاسُ', en: 'Family & people', icon: '👨‍👩‍👧' },
+  { id: 'body', ar: 'جِسْمِي', en: 'My body', icon: '✋' },
+  { id: 'home', ar: 'الْبَيْتُ', en: 'Home', icon: '🏠' },
+  { id: 'appliances', ar: 'أَجْهِزَةُ الْبَيْتِ', en: 'Home appliances', icon: '🔌' },
+  { id: 'kitchen', ar: 'الْمَطْبَخُ', en: 'Kitchen', icon: '🍽️' },
+  { id: 'food', ar: 'الطَّعَامُ وَالشَّرَابُ', en: 'Food & drink', icon: '🍞' },
+  { id: 'fruitveg', ar: 'الْفَوَاكِهُ وَالْخُضَارُ', en: 'Fruits & vegetables', icon: '🍎' },
+  { id: 'clothes', ar: 'الْمَلَابِسُ', en: 'Clothes', icon: '👕' },
+  { id: 'school', ar: 'الْمَدْرَسَةُ', en: 'School', icon: '🎒' },
+  { id: 'transport', ar: 'الْمُوَاصَلَاتُ', en: 'Transportation', icon: '🚌' },
+  { id: 'jobs', ar: 'الْمِهَنُ', en: 'Jobs', icon: '🧑‍⚕️' },
+  { id: 'places', ar: 'الْأَمَاكِنُ', en: 'Places', icon: '🏙️' },
+  { id: 'nature', ar: 'الطَّبِيعَةُ', en: 'Nature & weather', icon: '🌳' },
+  { id: 'colors', ar: 'الْأَلْوَانُ', en: 'Colors', icon: '🎨' },
+  { id: 'play', ar: 'اللَّعِبُ وَالرِّيَاضَةُ', en: 'Play & sports', icon: '⚽' },
+  { id: 'tools', ar: 'أَدَوَاتٌ يَوْمِيَّةٌ', en: 'Everyday things', icon: '🔑' },
+];

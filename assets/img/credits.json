@@ -1,0 +1,967 @@
+{
+ "cat": {
+  "src": "Cat",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/640px-Siam_lilacpoint.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Cat"
+ },
+ "dog": {
+  "src": "Dog",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Huskiesatrest.jpg/640px-Huskiesatrest.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Dog"
+ },
+ "horse": {
+  "src": "Horse",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Nokota_Horses_cropped.jpg/640px-Nokota_Horses_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Horse"
+ },
+ "cow": {
+  "src": "Cattle",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/640px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Cattle"
+ },
+ "lion": {
+  "src": "Lion",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg/640px-020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Lion"
+ },
+ "fish": {
+  "src": "Goldfish",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Gold_fish1.jpg/640px-Gold_fish1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Goldfish"
+ },
+ "father": {
+  "src": "Father",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Father%27s_love_%28cropped%29.jpg/640px-Father%27s_love_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Father"
+ },
+ "mother": {
+  "src": "Mother",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Portrait_of_a_woman_holding_a_baby_%28I0024828%29.jpg/640px-Portrait_of_a_woman_holding_a_baby_%28I0024828%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Mother"
+ },
+ "boy": {
+  "src": "Boy",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Smiling_little_boy_of_Laos.jpg/640px-Smiling_little_boy_of_Laos.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Boy"
+ },
+ "girl": {
+  "src": "Girl",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Young_girl_smiling_in_sunshine_%282%29.jpg/640px-Young_girl_smiling_in_sunshine_%282%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Girl"
+ },
+ "grandfather": {
+  "src": "Grandparent",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/The_Favorite_by_Georgios_Iakovidis.jpg/640px-The_Favorite_by_Georgios_Iakovidis.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Grandparent"
+ },
+ "grandmother": {
+  "src": "commons:grandmother grandchild",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "eye": {
+  "src": "Human eye",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Human_eye_with_blood_vessels.jpg/640px-Human_eye_with_blood_vessels.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Human_eye"
+ },
+ "ear": {
+  "src": "Ear",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Human_right_ear_%28cropped%29.jpg/640px-Human_right_ear_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Ear"
+ },
+ "nose": {
+  "src": "Human nose",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Fort_Ross_Elena_wearing_Traditional_Russian_Costume_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "page": "https://en.wikipedia.org/wiki/Human_nose"
+ },
+ "mouth": {
+  "src": "commons:child smiling teeth",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "hand": {
+  "src": "Hand",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Hand%2C_fingers_-_back.jpg/640px-Hand%2C_fingers_-_back.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Hand"
+ },
+ "house": {
+  "src": "commons:suburban house",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "door": {
+  "src": "commons:wooden front door house",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Westerblokker_52.jpg/960px-Westerblokker_52.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Westerblokker_52.jpg"
+ },
+ "window": {
+  "src": "commons:house window glass white frame",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Window_with_blue_shutters_and_a_chapel_reflected_on_the_glass%2C_Tinos%2C_Greece_julesvernex2.jpg/960px-Window_with_blue_shutters_and_a_chapel_reflected_on_the_glass%2C_Tinos%2C_Greece_julesvernex2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Window_with_blue_shutters_and_a_chapel_reflected_on_the_glass,_Tinos,_Greece_julesvernex2.jpg"
+ },
+ "bed": {
+  "src": "Bed",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/2008-04-12_Freilichtmuseum_Detmold_%2811%29.jpg/640px-2008-04-12_Freilichtmuseum_Detmold_%2811%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Bed"
+ },
+ "chair": {
+  "src": "Chair",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Set_of_fourteen_side_chairs_MET_DP110780.jpg/640px-Set_of_fourteen_side_chairs_MET_DP110780.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Chair"
+ },
+ "table": {
+  "src": "Table (furniture)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Beautiful_Baroque_gilded_table_from_the_Cinquantenaire_Museum_%28Bruxelles%2C_Belgium%29.jpg/640px-Beautiful_Baroque_gilded_table_from_the_Cinquantenaire_Museum_%28Bruxelles%2C_Belgium%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Table_(furniture)"
+ },
+ "fridge": {
+  "src": "Refrigerator",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Open_refrigerator_with_food_at_night.jpg/640px-Open_refrigerator_with_food_at_night.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Refrigerator"
+ },
+ "tv": {
+  "src": "commons:flat screen television living room",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/A_flat-screen_television.jpg/960px-A_flat-screen_television.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:A_flat-screen_television.jpg"
+ },
+ "lamp": {
+  "src": "commons:table lamp lampshade",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Lamp_with_a_lampshade_illuminated_by_sunlight.jpg/960px-Lamp_with_a_lampshade_illuminated_by_sunlight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Lamp_with_a_lampshade_illuminated_by_sunlight.jpg"
+ },
+ "phone": {
+  "src": "Smartphone",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Wikipedia_homepage_on_a_large_Android_phone%2C_2015-04-16.jpg/640px-Wikipedia_homepage_on_a_large_Android_phone%2C_2015-04-16.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Smartphone"
+ },
+ "fan": {
+  "src": "Mechanical fan",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Hatari_18_inch_fan.jpg/640px-Hatari_18_inch_fan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Fan_(machine)"
+ },
+ "washer": {
+  "src": "Washing machine",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/LG_%EB%93%9C%EB%9F%BC%EC%84%B8%ED%83%81%EA%B8%B0%EC%99%80_%EC%8B%9D%EA%B8%B0%EC%84%B8%EC%B2%99%EA%B8%B0%2C_%EC%98%81%EA%B5%AD%EC%84%9C_%EB%AC%BC%EC%82%AC%EC%9A%A9_%ED%9A%A8%EC%9C%A8_%EC%B5%9C%EC%9A%B0%EC%88%98_%EC%A0%9C%ED%92%88_%EC%88%98%EC%83%81.jpg/640px-LG_%EB%93%9C%EB%9F%BC%EC%84%B8%ED%83%81%EA%B8%B0%EC%99%80_%EC%8B%9D%EA%B8%B0%EC%84%B8%EC%B2%99%EA%B8%B0%2C_%EC%98%81%EA%B5%AD%EC%84%9C_%EB%AC%BC%EC%82%AC%EC%9A%A9_%ED%9A%A8%EC%9C%A8_%EC%B5%9C%EC%9A%B0%EC%88%98_%EC%A0%9C%ED%92%88_%EC%88%98%EC%83%81.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Washing_machine"
+ },
+ "cup": {
+  "src": "Mug",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Mug_of_Tea.JPG/640px-Mug_of_Tea.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Mug"
+ },
+ "spoon": {
+  "src": "Spoon",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Soup_Spoon.jpg/640px-Soup_Spoon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Spoon"
+ },
+ "plate": {
+  "src": "Plate (dishware)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Botanical_plate_with_spray_of_fruiting_Indian_Bean_Tree_MET_DP-1687-038_%28cropped%29.jpg/640px-Botanical_plate_with_spray_of_fruiting_Indian_Bean_Tree_MET_DP-1687-038_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Plate_(dishware)"
+ },
+ "knife": {
+  "src": "Kitchen knife",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Cucina_012.jpg/640px-Cucina_012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Kitchen_knife"
+ },
+ "fork": {
+  "src": "Fork",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Assorted_forks.jpg/640px-Assorted_forks.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Fork"
+ },
+ "pot": {
+  "src": "commons:cooking pot stove",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Cooking_potatos_on_a_large_hobo_stove_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Cooking_potatos_on_a_large_hobo_stove_04.jpg"
+ },
+ "bread": {
+  "src": "Bread",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Korb_mit_Br%C3%B6tchen.JPG/640px-Korb_mit_Br%C3%B6tchen.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Bread"
+ },
+ "water": {
+  "src": "Drinking water",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Clean_water_for_a_village_in_West_Lombok_%2810686572086%29.jpg/640px-Clean_water_for_a_village_in_West_Lombok_%2810686572086%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Drinking_water"
+ },
+ "milk": {
+  "src": "Milk",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Glass_of_Milk_%2833657535532%29.jpg/640px-Glass_of_Milk_%2833657535532%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Milk"
+ },
+ "egg": {
+  "src": "Egg as food",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Huevo_frito.jpg/640px-Huevo_frito.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Eggs_as_food"
+ },
+ "rice": {
+  "src": "commons:bowl of cooked white rice",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/A_bowl_of_rice.jpg/960px-A_bowl_of_rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:A_bowl_of_rice.jpg"
+ },
+ "cheese": {
+  "src": "Cheese",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Cheese_platter.jpg/640px-Cheese_platter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Cheese"
+ },
+ "apple": {
+  "src": "Apple",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Pink_lady_and_cross_section.jpg/640px-Pink_lady_and_cross_section.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Apple"
+ },
+ "banana": {
+  "src": "Banana",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Bananavarieties.jpg/640px-Bananavarieties.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Banana"
+ },
+ "shoe": {
+  "src": "commons:sneakers pair",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Professional_Sneakers_-_Sneakers_for_hostesses%2C_pilots_and_other_professionals._Comfortable_sneakers_produced_in_leather_inside_and_outside.jpg/960px-Professional_Sneakers_-_Sneakers_for_hostesses%2C_pilots_and_other_professionals._Comfortable_sneakers_produced_in_leather_inside_and_outside.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Professional_Sneakers_-_Sneakers_for_hostesses,_pilots_and_other_professionals._Comfortable_sneakers_produced_in_leather_inside_and_outside.jpg"
+ },
+ "book": {
+  "src": "Book",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/640px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Book"
+ },
+ "pencil": {
+  "src": "Pencil",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Pencils_hb.jpg/640px-Pencils_hb.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Pencil"
+ },
+ "eraser": {
+  "src": "Eraser",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Office-pink-erasers.jpg/640px-Office-pink-erasers.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Eraser"
+ },
+ "car": {
+  "src": "commons:hatchback car",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "bus": {
+  "src": "Bus",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/LTZ1328-19-20241030-160332.jpg/640px-LTZ1328-19-20241030-160332.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Bus"
+ },
+ "airplane": {
+  "src": "Airplane",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/United_Airlines_Boeing_777-200_Meulemans.jpg/640px-United_Airlines_Boeing_777-200_Meulemans.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Airplane"
+ },
+ "bicycle": {
+  "src": "Bicycle",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Left_side_of_Flying_Pigeon.jpg/640px-Left_side_of_Flying_Pigeon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Bicycle"
+ },
+ "doctor": {
+  "src": "commons:doctor stethoscope white coat",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Doctor_in_a_clinic_smiling_while_wearing_glasses_and_a_white_coat_with_a_stethoscope_around_her_neck.jpg/960px-Doctor_in_a_clinic_smiling_while_wearing_glasses_and_a_white_coat_with_a_stethoscope_around_her_neck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Doctor_in_a_clinic_smiling_while_wearing_glasses_and_a_white_coat_with_a_stethoscope_around_her_neck.jpg"
+ },
+ "teacher": {
+  "src": "Teacher",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/A_public_high_school_teacher_in_a_classroom_in_the_United_States_08.jpg/640px-A_public_high_school_teacher_in_a_classroom_in_the_United_States_08.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Teacher"
+ },
+ "police": {
+  "src": "Police officer",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Very_friendly_MPS_officers_in_London.jpg/640px-Very_friendly_MPS_officers_in_London.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Police_officer"
+ },
+ "cook": {
+  "src": "commons:chef uniform hat",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "farmer": {
+  "src": "Farmer",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Woman_at_work%2C_Gujarat.jpg/640px-Woman_at_work%2C_Gujarat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Farmer"
+ },
+ "pilot": {
+  "src": "Aircraft pilot",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Lt_Mike_Hunter_1.jpg/640px-Lt_Mike_Hunter_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Aircraft_pilot"
+ },
+ "mosque": {
+  "src": "Mosque",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Masjid_e_Nabawi_Interior_2.jpg/640px-Masjid_e_Nabawi_Interior_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Mosque"
+ },
+ "market": {
+  "src": "Marketplace",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/The_Moorish_Bazaar.jpg/640px-The_Moorish_Bazaar.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Marketplace"
+ },
+ "garden": {
+  "src": "Garden",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Brooklyn_Botanic_Garden_New_York_May_2015_010.jpg/640px-Brooklyn_Botanic_Garden_New_York_May_2015_010.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Garden"
+ },
+ "hospital": {
+  "src": "Hospital",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Hospital-de-Bellvitge.jpg/640px-Hospital-de-Bellvitge.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Hospital"
+ },
+ "restaurant": {
+  "src": "Restaurant",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Barbieri_-_ViaSophia25668.jpg/640px-Barbieri_-_ViaSophia25668.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Restaurant"
+ },
+ "bakery": {
+  "src": "Bakery",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Belgium_2013_%2811620905224%29.jpg/640px-Belgium_2013_%2811620905224%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Bakery"
+ },
+ "moon": {
+  "src": "Moon",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/640px-FullMoon2010.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Moon"
+ },
+ "tree": {
+  "src": "Tree",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Usamljeni_jasen_-_panoramio_%28cropped%29.jpg/640px-Usamljeni_jasen_-_panoramio_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Tree"
+ },
+ "sea": {
+  "src": "commons:sea waves blue horizon",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Lonely_Woman_Watching_Sea_Waves_on_Beach.jpg/960px-Lonely_Woman_Watching_Sea_Waves_on_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Lonely_Woman_Watching_Sea_Waves_on_Beach.jpg"
+ },
+ "rose": {
+  "src": "Rose",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Rosa_rubiginosa_1.jpg/640px-Rosa_rubiginosa_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Rose"
+ },
+ "mountain": {
+  "src": "Mountain",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/640px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Mountain"
+ },
+ "camel": {
+  "src": "Camel",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/07._Camel_Profile%2C_near_Silverton%2C_NSW%2C_07.07.2007.jpg/640px-07._Camel_Profile%2C_near_Silverton%2C_NSW%2C_07.07.2007.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Camel"
+ },
+ "elephant": {
+  "src": "Elephant",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/640px-African_Bush_Elephant.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Elephant"
+ },
+ "monkey": {
+  "src": "Monkey",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Ubud_Monkey_Family.jpg/640px-Ubud_Monkey_Family.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Monkey"
+ },
+ "hen": {
+  "src": "Chicken",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/640px-Male_and_female_chicken_sitting_together.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Chicken"
+ },
+ "sheep": {
+  "src": "Sheep",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Flock_of_sheep.jpg/640px-Flock_of_sheep.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Sheep"
+ },
+ "rabbit": {
+  "src": "Rabbit",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Oryctolagus_cuniculus_Rcdo.jpg/640px-Oryctolagus_cuniculus_Rcdo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Rabbit"
+ },
+ "sparrow": {
+  "src": "House sparrow",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/House_sparrow_male_in_Prospect_Park_%2853532%29.jpg/640px-House_sparrow_male_in_Prospect_Park_%2853532%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/House_sparrow"
+ },
+ "giraffe": {
+  "src": "Giraffe",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/640px-Giraffe_Mikumi_National_Park.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Giraffe"
+ },
+ "brother": {
+  "src": "commons:two brothers smiling",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Smiling_Muslim_Brothers_Exchanging_Greetings_During_Ramadan.jpg/960px-Smiling_Muslim_Brothers_Exchanging_Greetings_During_Ramadan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Smiling_Muslim_Brothers_Exchanging_Greetings_During_Ramadan.jpg"
+ },
+ "sister": {
+  "src": "commons:two sisters smiling",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Two_young_sisters_enjoy_a_playful_moment_on_a_soft_rug%2C_smiling_at_each_other_while_wearing_matching_knit_sweaters.jpg/960px-Two_young_sisters_enjoy_a_playful_moment_on_a_soft_rug%2C_smiling_at_each_other_while_wearing_matching_knit_sweaters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Two_young_sisters_enjoy_a_playful_moment_on_a_soft_rug,_smiling_at_each_other_while_wearing_matching_knit_sweaters.jpg"
+ },
+ "man": {
+  "src": "Man",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/640px-Outdoors-man-portrait_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Man"
+ },
+ "woman": {
+  "src": "Woman",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Woman_at_Lover%27s_Bridge_Tanjung_Sepat_%28cropped%29.jpg/640px-Woman_at_Lover%27s_Bridge_Tanjung_Sepat_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Woman"
+ },
+ "friend": {
+  "src": "Friendship",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Best_friends_%281934%29%2C_by_Romualdo_Locatelli.jpg/640px-Best_friends_%281934%29%2C_by_Romualdo_Locatelli.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Friendship"
+ },
+ "hair": {
+  "src": "commons:long hair girl back",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Hair_tie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Hair_tie.jpg"
+ },
+ "foot": {
+  "src": "Foot",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Foot_on_white_background.jpg/640px-Foot_on_white_background.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Foot"
+ },
+ "bathroom": {
+  "src": "commons:bathroom",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "stairs": {
+  "src": "Stairs",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/At_Victoria_and_Albert_Museum_2025_018.jpg/640px-At_Victoria_and_Albert_Museum_2025_018.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Stairs"
+ },
+ "wall": {
+  "src": "commons:brick wall",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ivy_Hedera_Red_Brick_Wall_2892px.jpg/960px-Ivy_Hedera_Red_Brick_Wall_2892px.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Ivy_Hedera_Red_Brick_Wall_2892px.jpg"
+ },
+ "sofa": {
+  "src": "Couch",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/2009-05-16_Main_office_lobby_at_Hampton_Forest_Apartments.jpg/640px-2009-05-16_Main_office_lobby_at_Hampton_Forest_Apartments.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Couch"
+ },
+ "mirror": {
+  "src": "Mirror",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Mirror.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "page": "https://en.wikipedia.org/wiki/Mirror"
+ },
+ "carpet": {
+  "src": "Carpet",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Wollteppich_1.jpg/640px-Wollteppich_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Carpet"
+ },
+ "oven": {
+  "src": "commons:electric oven door",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "aircon": {
+  "src": "Air conditioning",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/MITSUBISHI_ELECTRIC_WINDOW_TYPE_AIR_CONDITIONER_OUTDOOR_UNIT.jpg/640px-MITSUBISHI_ELECTRIC_WINDOW_TYPE_AIR_CONDITIONER_OUTDOOR_UNIT.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Air_conditioning"
+ },
+ "computer": {
+  "src": "Laptop",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Laptop_collage.jpg/640px-Laptop_collage.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Laptop"
+ },
+ "iron": {
+  "src": "Clothes iron",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Teal_and_white_electric_steam_iron_-_side_view.jpg/640px-Teal_and_white_electric_steam_iron_-_side_view.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Clothes_iron"
+ },
+ "clock": {
+  "src": "Clock",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Pendulum_clock_by_Jacob_Kock%2C_antique_furniture_photography%2C_IMG_0931_edit.jpg/640px-Pendulum_clock_by_Jacob_Kock%2C_antique_furniture_photography%2C_IMG_0931_edit.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Clock"
+ },
+ "kettle": {
+  "src": "Kettle",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Bernadotte_Wasserkessel.jpg/640px-Bernadotte_Wasserkessel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Kettle"
+ },
+ "broom": {
+  "src": "Broom",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/BroomsforSale.jpg/640px-BroomsforSale.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Broom"
+ },
+ "teapot": {
+  "src": "Teapot",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Black_tea_pot_cropped.jpg/640px-Black_tea_pot_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Teapot"
+ },
+ "pan": {
+  "src": "Frying pan",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Pfanne_%28Edelstahl%29.jpg/640px-Pfanne_%28Edelstahl%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Frying_pan"
+ },
+ "meat": {
+  "src": "Meat",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/FoodMeat.jpg/640px-FoodMeat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Meat"
+ },
+ "honey": {
+  "src": "Honey",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Runny_hunny.jpg/640px-Runny_hunny.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Honey"
+ },
+ "sugar": {
+  "src": "Sugar",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Sucre_blanc_cassonade_complet_rapadura.jpg/640px-Sucre_blanc_cassonade_complet_rapadura.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Sugar"
+ },
+ "juice": {
+  "src": "Juice",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Orange_juice_1.jpg/640px-Orange_juice_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Juice"
+ },
+ "tea": {
+  "src": "commons:glass of tea",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Glass_of_tea_05119.jpg/960px-Glass_of_tea_05119.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Glass_of_tea_05119.jpg"
+ },
+ "cake": {
+  "src": "Cake",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Pound_layer_cake.jpg/640px-Pound_layer_cake.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Cake"
+ },
+ "watermelon": {
+  "src": "commons:watermelon slice",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Watermelon_slice%2C_May_2024.jpg/960px-Watermelon_slice%2C_May_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Watermelon_slice,_May_2024.jpg"
+ },
+ "lemon": {
+  "src": "Lemon",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/P1030323.JPG/640px-P1030323.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Lemon"
+ },
+ "potato": {
+  "src": "Potato",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Patates.jpg/640px-Patates.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Potato"
+ },
+ "skirt": {
+  "src": "commons:denim skirt",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "classroom": {
+  "src": "Classroom",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Elementary_classroom_in_Alaska.jpg/640px-Elementary_classroom_in_Alaska.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Classroom"
+ },
+ "ruler": {
+  "src": "Ruler",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Diverse%C2%B7Ma%C3%9Fst%C3%A4be%2C15.365.jpg/640px-Diverse%C2%B7Ma%C3%9Fst%C3%A4be%2C15.365.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Ruler"
+ },
+ "library": {
+  "src": "Library",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/SanDiegoCityCollegeLearningResource_-_bookshelf.jpg/640px-SanDiegoCityCollegeLearningResource_-_bookshelf.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Library"
+ },
+ "paper": {
+  "src": "commons:blank paper sheet",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "sharpener": {
+  "src": "Pencil sharpener",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Sharpener_with_Pencil.jpg/640px-Sharpener_with_Pencil.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Pencil_sharpener"
+ },
+ "truck": {
+  "src": "Truck",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/2001_Ford_F-250_Super_Duty_XL_regular_cab_flatbed%2C_front_left%2C_05-17-2025.jpg/640px-2001_Ford_F-250_Super_Duty_XL_regular_cab_flatbed%2C_front_left%2C_05-17-2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Truck"
+ },
+ "motorcycle": {
+  "src": "Motorcycle",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Istockphoto-114285168-612x612.jpg/640px-Istockphoto-114285168-612x612.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Motorcycle"
+ },
+ "ambulance": {
+  "src": "Ambulance",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Stockholm%2C_ambulans%2C_2014%2C_21.jpg/640px-Stockholm%2C_ambulans%2C_2014%2C_21.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Ambulance"
+ },
+ "boat": {
+  "src": "Boat",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Motorboat_at_Kankaria_lake.JPG/640px-Motorboat_at_Kankaria_lake.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Boat"
+ },
+ "helicopter": {
+  "src": "Helicopter",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/VH-SUF_Taking_Off.jpg/640px-VH-SUF_Taking_Off.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Helicopter"
+ },
+ "taxi": {
+  "src": "Taxi",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/TAXI.jpg/640px-TAXI.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Taxi"
+ },
+ "trafficlight": {
+  "src": "Traffic light",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Modern_British_LED_Traffic_Light.jpg/640px-Modern_British_LED_Traffic_Light.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Traffic_light"
+ },
+ "rocket": {
+  "src": "Rocket",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Soyuz_TMA-9_launch.jpg/640px-Soyuz_TMA-9_launch.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Rocket"
+ },
+ "engineer": {
+  "src": "commons:engineer hard hat construction site",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/US_Army_52407_Michael_Dennis_looks_out_over_a_construction_site.jpg/960px-US_Army_52407_Michael_Dennis_looks_out_over_a_construction_site.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:US_Army_52407_Michael_Dennis_looks_out_over_a_construction_site.jpg"
+ },
+ "carpenter": {
+  "src": "Carpenter",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/PalmercarpenterA.jpg/640px-PalmercarpenterA.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Carpentry"
+ },
+ "nurse": {
+  "src": "Nurse",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Nurse_checks_blood_pressure.jpg/640px-Nurse_checks_blood_pressure.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Nursing"
+ },
+ "firefighter": {
+  "src": "Firefighter",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/FiremenFightBurningBarn.jpg/640px-FiremenFightBurningBarn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Firefighter"
+ },
+ "city": {
+  "src": "City",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg/640px-Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/City"
+ },
+ "village": {
+  "src": "Village",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Bourton-on-the-Water_2010_PD_09.JPG/640px-Bourton-on-the-Water_2010_PD_09.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Village"
+ },
+ "zoo": {
+  "src": "commons:zoo visitors animals enclosure",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Visitor_is_looking_at_the_animals_enclosure_through_a_glass_at_a_zoo_in_Spain_Tenerife_Europe.jpg/960px-Visitor_is_looking_at_the_animals_enclosure_through_a_glass_at_a_zoo_in_Spain_Tenerife_Europe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Visitor_is_looking_at_the_animals_enclosure_through_a_glass_at_a_zoo_in_Spain_Tenerife_Europe.jpg"
+ },
+ "beach": {
+  "src": "Beach",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Beach_at_Fort_Lauderdale.jpg/640px-Beach_at_Fort_Lauderdale.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Beach"
+ },
+ "sky": {
+  "src": "commons:blue sky white clouds",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Colorful_clouds_and_blue_sky_with_water_reflection_of_an_island_hosting_trees_at_sunrise_in_Si_Phan_Don%2C_Laos.jpg/960px-Colorful_clouds_and_blue_sky_with_water_reflection_of_an_island_hosting_trees_at_sunrise_in_Si_Phan_Don%2C_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Colorful_clouds_and_blue_sky_with_water_reflection_of_an_island_hosting_trees_at_sunrise_in_Si_Phan_Don,_Laos.jpg"
+ },
+ "cloud": {
+  "src": "commons:cumulus cloud blue sky",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Stratocumulus_and_cumulus_over_G%C3%A5seberg.jpg/960px-Stratocumulus_and_cumulus_over_G%C3%A5seberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Stratocumulus_and_cumulus_over_G%C3%A5seberg.jpg"
+ },
+ "river": {
+  "src": "River",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Pirogue_running_on_the_Mekong_at_golden_hour_between_Don_Det_and_Don_Khon_Laos.jpg/640px-Pirogue_running_on_the_Mekong_at_golden_hour_between_Don_Det_and_Don_Khon_Laos.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/River"
+ },
+ "snow": {
+  "src": "commons:snowman",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "fire": {
+  "src": "Fire",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Large_bonfire.jpg/640px-Large_bonfire.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Fire"
+ },
+ "ball": {
+  "src": "Ball (association football)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Adidas_Trionda_ball.jpg/640px-Adidas_Trionda_ball.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Ball_(association_football)"
+ },
+ "swimming": {
+  "src": "Swimming",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/40._Schwimmzonen-_und_Mastersmeeting_Enns_2017_100m_Brust_Herren_USC_Traun-9897.jpg/640px-40._Schwimmzonen-_und_Mastersmeeting_Enns_2017_100m_Brust_Herren_USC_Traun-9897.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Swimming"
+ },
+ "running": {
+  "src": "Running",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Speedsuit.jpg/640px-Speedsuit.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Running"
+ },
+ "doll": {
+  "src": "Doll",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Poup%C3%A9e_c_1870.jpg/640px-Poup%C3%A9e_c_1870.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Doll"
+ },
+ "key": {
+  "src": "Key (lock)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg/640px-Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Lock_and_key"
+ },
+ "toothbrush": {
+  "src": "Toothbrush",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Toothbrush_20050716_004.jpg/640px-Toothbrush_20050716_004.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Toothbrush"
+ },
+ "soap": {
+  "src": "Soap",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Handmade_soap_cropped_and_simplified.jpg/640px-Handmade_soap_cropped_and_simplified.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Soap"
+ },
+ "leg": {
+  "src": "commons:legs jeans walking",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "orange": {
+  "src": "Orange (fruit)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Oranges_-_whole-halved-segment.jpg/640px-Oranges_-_whole-halved-segment.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Orange_(fruit)"
+ },
+ "grapes": {
+  "src": "Grape",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Grapes%2C_Rostov-on-Don%2C_Russia.jpg/640px-Grapes%2C_Rostov-on-Don%2C_Russia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Grape"
+ },
+ "tomato": {
+  "src": "Tomato",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/640px-Tomato_je.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Tomato"
+ },
+ "carrot": {
+  "src": "Carrot",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Vegetable-Carrot-Bundle-wStalks.jpg/640px-Vegetable-Carrot-Bundle-wStalks.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Carrot"
+ },
+ "shirt": {
+  "src": "commons:t-shirt white background",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Young_North_Indian_man_with_beard_in_white_t-shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Young_North_Indian_man_with_beard_in_white_t-shirt.jpg"
+ },
+ "hat": {
+  "src": "commons:sun hat straw",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Sun_Hat_hanged_on_a_wall.jpg/960px-Sun_Hat_hanged_on_a_wall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Sun_Hat_hanged_on_a_wall.jpg"
+ },
+ "dress": {
+  "src": "commons:red dress mannequin",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "trousers": {
+  "src": "Trousers",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Trousers-colourisolated.jpg/640px-Trousers-colourisolated.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Trousers"
+ },
+ "sock": {
+  "src": "Sock",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/HandKnittedWhiteLaceSock.jpg/640px-HandKnittedWhiteLaceSock.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Sock"
+ },
+ "notebook": {
+  "src": "Notebook",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Notebooks.jpg/640px-Notebooks.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Notebook"
+ },
+ "bag": {
+  "src": "Backpack",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Rucksack1.jpg/640px-Rucksack1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Backpack"
+ },
+ "school": {
+  "src": "School",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0_%E2%84%962_%D0%B3._%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D1%82%D1%83%D1%80%D1%8C%D0%B8%D0%BD%D1%81%D0%BA%D0%B0.jpg/640px-%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0_%E2%84%962_%D0%B3._%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D1%82%D1%83%D1%80%D1%8C%D0%B8%D0%BD%D1%81%D0%BA%D0%B0.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/School"
+ },
+ "train": {
+  "src": "Train",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/%D0%9F%D0%BE%D0%B5%D0%B7%D0%B4_%D0%BD%D0%B0_%D1%84%D0%BE%D0%BD%D0%B5_%D0%B3%D0%BE%D1%80%D1%8B_%D0%A8%D0%B0%D1%82%D1%80%D0%B8%D1%89%D0%B5._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C.jpg/640px-%D0%9F%D0%BE%D0%B5%D0%B7%D0%B4_%D0%BD%D0%B0_%D1%84%D0%BE%D0%BD%D0%B5_%D0%B3%D0%BE%D1%80%D1%8B_%D0%A8%D0%B0%D1%82%D1%80%D0%B8%D1%89%D0%B5._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Train"
+ },
+ "ship": {
+  "src": "Ship",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Containerterminal_Altenwerder_%28Hamburg-Altenwerder%29.Iris_Bolten.4.phb.ajb.jpg/640px-Containerterminal_Altenwerder_%28Hamburg-Altenwerder%29.Iris_Bolten.4.phb.ajb.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Ship"
+ },
+ "child": {
+  "src": "Infant",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/The_newborn_baby_in_men.jpg/640px-The_newborn_baby_in_men.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Infant"
+ },
+ "head": {
+  "src": "commons:boy portrait face",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "tooth": {
+  "src": "Human tooth",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/06-10-06smile.jpg/640px-06-10-06smile.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Human_tooth"
+ },
+ "finger": {
+  "src": "commons:pointing finger",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "kitchen": {
+  "src": "Kitchen",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/La_cuisine_%28mus%C3%A9e_dart_nouveau%2C_Riga%29_%287563655820%29.jpg/640px-La_cuisine_%28mus%C3%A9e_dart_nouveau%2C_Riga%29_%287563655820%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Kitchen"
+ },
+ "wardrobe": {
+  "src": "commons:wooden wardrobe furniture",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Empty_wooden_wardrobe_closeup.jpg/960px-Empty_wooden_wardrobe_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Empty_wooden_wardrobe_closeup.jpg"
+ },
+ "blender": {
+  "src": "Blender (appliance)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Vitamix_Blender.jpg/640px-Vitamix_Blender.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Blender_(appliance)"
+ },
+ "bottle": {
+  "src": "Bottle",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Bouteille.jpg/640px-Bouteille.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Bottle"
+ },
+ "tray": {
+  "src": "Tray",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Brass_tray_inlaid_with_silver%2C_Egypt_or_Syria%2C_19th_century%2C_HAA_I.JPG/640px-Brass_tray_inlaid_with_silver%2C_Egypt_or_Syria%2C_19th_century%2C_HAA_I.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Tray"
+ },
+ "dates": {
+  "src": "commons:dried dates fruit",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "strawberry": {
+  "src": "Strawberry",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg/640px-Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Strawberry"
+ },
+ "pomegranate": {
+  "src": "Pomegranate",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pomegranate_Juice_%282019%29.jpg/640px-Pomegranate_Juice_%282019%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Pomegranate"
+ },
+ "cucumber": {
+  "src": "Cucumber",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/ARS_cucumber.jpg/640px-ARS_cucumber.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Cucumber"
+ },
+ "onion": {
+  "src": "Onion",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Mixed_onions.jpg/640px-Mixed_onions.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Onion"
+ },
+ "lettuce": {
+  "src": "commons:lettuce vegetable",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "coat": {
+  "src": "commons:winter coat jacket",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Polo_Ralph_Lauren_winter_coat_jacket.jpg/960px-Polo_Ralph_Lauren_winter_coat_jacket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Polo_Ralph_Lauren_winter_coat_jacket.jpg"
+ },
+ "glasses": {
+  "src": "Glasses",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/2023_Okulary_korekcyjne.jpg/640px-2023_Okulary_korekcyjne.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Glasses"
+ },
+ "thobe": {
+  "src": "Thawb",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Dishdasha.jpg/640px-Dishdasha.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Thawb"
+ },
+ "glove": {
+  "src": "Glove",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Centre_de_Documentaci%C3%B3_Museu_T%C3%A8xtil_de_Terrassa-_Reserves-_Teixits-_Guants002.JPG/640px-Centre_de_Documentaci%C3%B3_Museu_T%C3%A8xtil_de_Terrassa-_Reserves-_Teixits-_Guants002.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Glove"
+ },
+ "belt": {
+  "src": "Belt (clothing)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Germany_Belt-and-Buckle-02.jpg/640px-Germany_Belt-and-Buckle-02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Belt_(clothing)"
+ },
+ "board": {
+  "src": "Blackboard",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Homer_E_Newell_NASA.jpg/640px-Homer_E_Newell_NASA.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Blackboard"
+ },
+ "scissors": {
+  "src": "Scissors",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Standard_household_scissors.jpg/640px-Standard_household_scissors.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Scissors"
+ },
+ "student": {
+  "src": "Student",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/High_school_students%2C_SAS_Pudong.jpg/640px-High_school_students%2C_SAS_Pudong.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Student"
+ },
+ "baker": {
+  "src": "Baker",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/USS_John_C._Stennis_baker.jpg/640px-USS_John_C._Stennis_baker.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Baker"
+ },
+ "driver": {
+  "src": "commons:taxi driver",
+  "url": "(picked from candidates)",
+  "page": null
+ },
+ "barber": {
+  "src": "Barber",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Iranian_barber.jpg/640px-Iranian_barber.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Barber"
+ },
+ "airport": {
+  "src": "commons:airport terminal airplanes gate",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Airport_sleeve.jpg/960px-Airport_sleeve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Airport_sleeve.jpg"
+ },
+ "street": {
+  "src": "Street",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Typical_Street_In_The_Royal_Borough_Of_Kensington_And_Chelsea_In_London.jpg/640px-Typical_Street_In_The_Royal_Borough_Of_Kensington_And_Chelsea_In_London.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Street"
+ },
+ "stadium": {
+  "src": "Stadium",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Narendra_Modi_Stadium_view_from_the_gallery.jpg/640px-Narendra_Modi_Stadium_view_from_the_gallery.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Stadium"
+ },
+ "pharmacy": {
+  "src": "Pharmacy (shop)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Pharmacie%2C_Paris_2010.jpg/640px-Pharmacie%2C_Paris_2010.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Pharmacy_(shop)"
+ },
+ "desert": {
+  "src": "Desert",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Rub_al_Khali_002.JPG/640px-Rub_al_Khali_002.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Desert"
+ },
+ "swing": {
+  "src": "Swing (seat)",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/MoSchaukel.jpg/640px-MoSchaukel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Swing_(seat)"
+ },
+ "kite": {
+  "src": "Kite",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Kitesflying.jpg/640px-Kitesflying.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Kite"
+ },
+ "towel": {
+  "src": "Towel",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Zusammengelegte_Handt%C3%BCcher.jpg/640px-Zusammengelegte_Handt%C3%BCcher.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Towel"
+ },
+ "hammer": {
+  "src": "commons:claw hammer",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Claw_hammer_2.jpg/960px-Claw_hammer_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Claw_hammer_2.jpg"
+ },
+ "umbrella": {
+  "src": "Umbrella",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/M0354_000727-005_1.jpg/640px-M0354_000727-005_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Umbrella"
+ },
+ "fisherman": {
+  "src": "commons:fishermen boat nets",
+  "url": "(picked from candidates)",
+  "page": null
+ }
+}

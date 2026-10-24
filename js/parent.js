@@ -3,18 +3,18 @@ window.Parent = (function () {
   var h = UI.h;
   var W = Curriculum.wordById;
   var tab = 'overview';
+  var PASSWORD = '1933';
 
+  // Asked every time the parents' area is opened from the app.
   function show(app) {
-    if (sessionStorage.getItem('ysf.parent') === '1') return dashboard(app);
-    var a = 6 + Math.floor(Math.random() * 7), b = 6 + Math.floor(Math.random() * 7);
-    var input = h('input.input', { type: 'number', inputmode: 'numeric', placeholder: '?' });
+    var input = h('input.input.pin', { type: 'password', inputmode: 'numeric', autocomplete: 'off', placeholder: '••••' });
     function check() {
-      if (+input.value === a * b) { sessionStorage.setItem('ysf.parent', '1'); dashboard(app); }
-      else { UI.toast('Not quite — try again'); input.value = ''; }
+      if (input.value === PASSWORD) dashboard(app);
+      else { UI.toast('Wrong password'); input.value = ''; input.focus(); }
     }
     input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
     app.appendChild(h('div.screen.parent', { dir: 'ltr' },
-      h('div.card.gate', h('h2', '👨‍👩‍👦 Parents only'), h('p', 'What is ' + a + ' × ' + b + '?'), input,
+      h('div.card.gate', h('h2', '👨‍👩‍👦 Parents only'), h('p', 'Enter the password'), input,
         h('div.row', h('button.btn', { onclick: function () { App.go('home'); } }, 'Back'),
           h('button.btn.btn-primary', { onclick: check }, 'Enter')))));
     input.focus();
@@ -22,7 +22,8 @@ window.Parent = (function () {
 
   function dashboard(app) {
     app.innerHTML = '';
-    var tabs = [['overview', 'Overview'], ['words', 'Words'], ['reading', 'Reading'], ['plan', '6-month plan'], ['settings', 'Settings']];
+    Recordings.stop();
+    var tabs = [['overview', 'Overview'], ['voice', '🎙️ His voice'], ['words', 'Words'], ['reading', 'Reading'], ['writing', '✍️ Writing'], ['plan', '6-month plan'], ['settings', 'Settings']];
     var body = h('div.p-body');
     var nav = h('div.p-tabs', tabs.map(function (t) {
       return h('button.p-tab' + (tab === t[0] ? '.on' : ''), { onclick: function () { tab = t[0]; dashboard(app); } }, t[1]);
@@ -30,7 +31,72 @@ window.Parent = (function () {
     app.appendChild(h('div.screen.parent', { dir: 'ltr' },
       h('div.p-head', h('button.btn', { onclick: function () { App.go('home'); } }, '← Back to app'), h('h2', 'Parents\' dashboard')),
       nav, body));
-    ({ overview: overview, words: words, reading: reading, plan: plan, settings: settings })[tab](body, app);
+    ({ overview: overview, voice: voice, words: words, reading: reading, writing: writing, plan: plan, settings: settings })[tab](body, app);
+  }
+
+  // ▶ button that plays his own recording (newest first). `rec` is a Recordings meta entry.
+  function hisVoiceBtn(rec, label) {
+    if (!rec) return h('span.muted', '—');
+    return h('button.btn.small.btn-voice', {
+      title: 'Play his recording',
+      onclick: function () { Recordings.play(rec.id).catch(function () { UI.toast('Recording not found'); }); },
+    }, label || '▶ His voice');
+  }
+  function modelBtn(rec) {
+    return h('button.btn.small', { title: 'Play the model voice', onclick: function () { Recordings.stop(); Voice.play(rec.key, rec.text); } }, '🔊 Model');
+  }
+  function timeOf(ms) { var d = new Date(ms); return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0'); }
+
+  // ── every recording, newest first, grouped by date ──
+  function voice(body) {
+    var filter = body.dataset.filter || 'all';
+    var limit = +(body.dataset.limit || 80);
+    var seg = h('div.row', [['all', 'Everything'], ['word', 'Words'], ['sentence', 'Sentences'], ['low', 'Score under 80%']].map(function (f) {
+      return h('button.btn.small' + (filter === f[0] ? '.btn-primary' : ''), { onclick: function () { body.innerHTML = ''; body.dataset.filter = f[0]; voice(body); } }, f[1]);
+    }));
+    body.appendChild(seg);
+    body.appendChild(h('p.muted', 'Every time he says a word or reads a sentence to the microphone, it is recorded here (the last ' +
+      '4 attempts of each are kept). Press ▶ to hear how he said it and 🔊 to compare with the model voice. "Recognised as" is what the speech checker understood.'));
+    var holder = h('div', h('p.muted', 'Loading…'));
+    body.appendChild(holder);
+    Recordings.all().then(function (list) {
+      holder.innerHTML = '';
+      list = list.filter(function (r) {
+        return filter === 'all' || r.kind === filter || (filter === 'low' && r.score != null && r.score < 80);
+      });
+      if (!list.length) { holder.appendChild(h('p.muted', 'No recordings yet. They appear after he uses the 🎤 button.')); return; }
+      var byDate = {};
+      list.slice(0, limit).forEach(function (r) { (byDate[r.date] = byDate[r.date] || []).push(r); });
+      Object.keys(byDate).forEach(function (date) {
+        holder.appendChild(h('h3', date + (byDate[date][0].day ? ' · program day ' + byDate[date][0].day : '')));
+        holder.appendChild(h('div.p-table-wrap', h('table.p-table',
+          h('thead', h('tr', ['Time', '', '', 'Word / sentence', 'Score', 'Recognised as'].map(function (t) { return h('th', t); }))),
+          h('tbody', byDate[date].map(function (r) {
+            return h('tr',
+              h('td', timeOf(r.at)),
+              h('td', hisVoiceBtn(r, '▶ His voice')),
+              h('td', modelBtn(r)),
+              h('td', UI.arabic(r.text, { cls: 'small' })),
+              h('td', r.score != null ? bar(r.score) : h('span.muted', 'not checked')),
+              h('td', h('span.ar.small', r.heard || '')));
+          })))));
+      });
+      if (list.length > limit) {
+        holder.appendChild(h('button.btn', { onclick: function () { body.innerHTML = ''; body.dataset.limit = limit + 120; voice(body); } }, 'Show older recordings'));
+      }
+    });
+  }
+
+  function writing(body) {
+    body.appendChild(h('p', 'The writing worksheet is a 2-page PDF ready to print: page 1 has today\'s 10 words, each with its picture and 3 boxes to copy it into; page 2 has the 5 reading sentences, each with lines to copy it once. He can also open it himself from the ✍️ button on the home screen.'));
+    var p = Store.get();
+    var set = Worksheet.todaySet(p);
+    body.appendChild(h('div.row',
+      h('button.btn.btn-primary', { onclick: function () { Worksheet.open(set); } }, '📄 Today\'s worksheet'),
+      p.log.length > 1 ? h('button.btn', { onclick: function () { Worksheet.open(Worksheet.reviewSet(p)); } }, '🔁 Review worksheet (words that need practice)') : null));
+    body.appendChild(h('h3', 'On today\'s sheet'));
+    body.appendChild(h('div.p-chips', set.words.map(function (id) { return h('span.p-word', UI.arabic(W[id].ar, { cls: 'small' }), ' · ' + W[id].en); })));
+    body.appendChild(h('div', set.sentences.map(function (id) { var s = Curriculum.sentenceById(id); return s ? h('p', UI.arabic(s.t, { cls: 'small' })) : null; })));
   }
 
   function statCard(label, value, sub) {
@@ -106,12 +172,14 @@ window.Parent = (function () {
         h('td', (CATEGORIES.filter(function (c) { return c.id === w.cat; })[0] || {}).en),
         h('td', h('span.dots', [1, 2, 3, 4, 5, 6].map(function (i) { return h('i' + (i <= s.box ? '.on' : '')); }))),
         h('td', s.seen ? pct(s.correct, s.seen) + ' of ' + s.seen : '—'),
+        h('td', voiceSlot('w:' + id)),
         h('td', h('button.btn.small', { onclick: function () { pictureEditor(w, function () { body.innerHTML = ''; words(body, app); }); } }, 'Picture')));
     });
     body.appendChild(h('div.p-table-wrap', h('table.p-table',
-      h('thead', h('tr', ['', 'Arabic', 'English', 'Category', 'Level', 'Accuracy', ''].map(function (t) { return h('th', t); }))),
+      h('thead', h('tr', ['', 'Arabic', 'English', 'Category', 'Level', 'Accuracy', 'His voice', ''].map(function (t) { return h('th', t); }))),
       h('tbody', rows))));
     if (!shown.length) body.appendChild(h('p.muted', 'Nothing here yet.'));
+    fillVoiceSlots(body);
   }
 
   function pictureEditor(w, done) {
@@ -143,17 +211,29 @@ window.Parent = (function () {
     var p = Store.get();
     var ids = Object.keys(p.sentences).filter(function (id) { return Curriculum.sentenceById(id) && p.sentences[id].attempts; });
     ids.sort(function (a, b) { return p.sentences[a].best - p.sentences[b].best; });
-    body.appendChild(h('p.muted', 'Every sentence he has read aloud, hardest first. "Best" is the best attempt; tap 🔊 to hear the model reading. Words he struggled with in his last attempt are listed on the right.'));
+    body.appendChild(h('p.muted', 'Every sentence he has read aloud, hardest first. "Best" is the best attempt; tap 🔊 to hear the model reading and ▶ to hear his latest attempt. Words he struggled with in his last attempt are listed on the right.'));
     if (!ids.length) { body.appendChild(h('p.muted', 'No reading yet.')); return; }
     body.appendChild(h('div.p-table-wrap', h('table.p-table',
-      h('thead', h('tr', ['Sentence', 'Tries', 'Best', 'Last', 'Missed words'].map(function (t) { return h('th', t); }))),
+      h('thead', h('tr', ['Sentence', 'His voice', 'Tries', 'Best', 'Last', 'Missed words'].map(function (t) { return h('th', t); }))),
       h('tbody', ids.map(function (id) {
         var s = Curriculum.sentenceById(id), r = p.sentences[id];
         return h('tr',
           h('td', h('button.linkish', { onclick: function () { Voice.play('s:' + id, s.t); } }, UI.arabic(s.t, { cls: 'small' }), ' 🔊')),
+          h('td', voiceSlot('s:' + id)),
           h('td', String(r.attempts)), h('td', bar(r.best)), h('td', String(r.last) + '%'),
           h('td', h('span.ar.small', (r.missed || []).join('  '))));
       })))));
+    fillVoiceSlots(body);
+  }
+
+  // Placeholders for "his latest recording" buttons, filled once the recordings are loaded.
+  function voiceSlot(key) { return h('span.voice-slot', { dataset: { key: key } }); }
+  function fillVoiceSlots(body) {
+    Recordings.latest().then(function (latest) {
+      body.querySelectorAll('.voice-slot').forEach(function (el) {
+        el.appendChild(hisVoiceBtn(latest[el.dataset.key], '▶'));
+      });
+    });
   }
 
   function plan(body) {
@@ -197,14 +277,33 @@ window.Parent = (function () {
     name.onchange = function () { p.profile.name = name.value.trim(); Store.save(); UI.toast('Saved'); };
 
     var micOut = h('div.p-mic-out');
+    // Shows the three things that can go wrong separately: mic access, sound level, and recognition.
     var micBtn = h('button.btn', {
       onclick: function () {
-        if (!Listener.supported) { micOut.textContent = 'This browser has no speech recognition — please use Google Chrome.'; return; }
-        micOut.textContent = '🎤 Listening… say a short Arabic sentence.';
+        if (!Listener.supported && !Listener.canRecord) { micOut.textContent = 'This browser cannot use the microphone — please use Google Chrome.'; return; }
+        var lvl = h('i'), text = h('div', '🎤 Listening… say a short Arabic sentence.');
+        micOut.innerHTML = '';
+        micOut.appendChild(text);
+        micOut.appendChild(h('div.level', lvl));
+        micBtn.disabled = true;
         Listener.listen({
           lang: s.recLang, silenceMs: 2500,
-          onUpdate: function (c) { micOut.textContent = '🎤 ' + c[0]; },
-          onDone: function (r) { micOut.textContent = r.error ? Listener.message(r.error) || r.error : r.heard ? 'Heard: ' + r.candidates[0] : 'Nothing heard — check the microphone.'; },
+          onLevel: function (v) { lvl.style.width = Math.round(v * 100) + '%'; },
+          onUpdate: function (c) { text.textContent = '🎤 ' + c[0]; },
+          onDone: function (r) {
+            micBtn.disabled = false;
+            micOut.innerHTML = '';
+            var lines = [];
+            if (r.error) lines.push('⚠️ ' + (Listener.message(r.error) || r.error));
+            lines.push(r.voiced ? '✅ Microphone: sound received.' : '❌ Microphone: no sound received — check the input device in Windows sound settings.');
+            if (Listener.supported) lines.push(r.heard ? '✅ Speech checking understood: ' + r.candidates[0] : '❌ Speech checking understood nothing' + (r.voiced ? ' (try speaking closer / louder, or change the dialect below).' : '.'));
+            else lines.push('❌ Speech checking is not available in this browser — use Google Chrome.');
+            lines.forEach(function (l) { micOut.appendChild(h('div', l)); });
+            if (r.audio) {
+              var url = URL.createObjectURL(r.audio);
+              micOut.appendChild(h('button.btn.small', { onclick: function () { new Audio(url).play(); } }, '▶ Play back what was recorded'));
+            }
+          },
         });
       },
     }, 'Test microphone');
@@ -241,9 +340,9 @@ window.Parent = (function () {
       field('Reset', h('button.btn.btn-danger', {
         onclick: function () {
           var inp = h('input.input', { placeholder: 'type RESET' });
-          UI.modal([h('div', { dir: 'ltr' }, h('h3', 'Erase all progress?'), h('p', 'This cannot be undone. Type RESET to confirm.'), inp)], [
+          UI.modal([h('div', { dir: 'ltr' }, h('h3', 'Erase all progress?'), h('p', 'This also deletes his voice recordings. It cannot be undone. Type RESET to confirm.'), inp)], [
             { label: 'Cancel' },
-            { label: 'Erase', cls: 'btn-danger', onclick: function () { if (inp.value === 'RESET') { Store.reset(); sessionStorage.removeItem('ysf.parent'); App.go('home'); } } },
+            { label: 'Erase', cls: 'btn-danger', onclick: function () { if (inp.value === 'RESET') { Store.reset(); Recordings.clear(); App.go('home'); } } },
           ]);
         },
       }, 'Erase all progress'))));

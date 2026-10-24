@@ -6,6 +6,7 @@
 //   'file:Name.jpg'    → a specific Wikimedia Commons file
 //   'color:#hex'       → a colour swatch (no download)
 //   'emoji'            → show the emoji instead of a photo (when no clear photo exists)
+// Male/female pairs are listed at the end (GENDER_PAIRS): each word gets g: 'm' | 'f' and pair: <partner id>.
 // Tier = difficulty band. Tier 1 → stage 1 (weeks 1-4), tier 2 → stage 2 (weeks 5-9), and so on.
 window.WORDS = [];
 (function () {
@@ -127,6 +128,16 @@ window.WORDS = [];
     ['sea', 'بَحْرٌ', 'Sea', '🌊', 'commons:sea waves blue horizon'],
     ['rose', 'وَرْدَةٌ', 'Rose / flower', '🌹', 'Rose'],
     ['mountain', 'جَبَلٌ', 'Mountain', '⛰️'],
+  ]);
+
+  add(1, 'gender', [
+    ['cat-f', 'قِطَّةٌ', 'Cat (female)', '🐈', 'file:Siberian black tabby blotched cat 04.jpg'],
+    ['dog-f', 'كَلْبَةٌ', 'Dog (female)', '🐕', 'commons:mother dog with puppies'],
+    ['lioness', 'لَبُؤَةٌ', 'Lioness', '🦁', 'commons:lioness portrait'],
+    ['bull', 'ثَوْرٌ', 'Bull', '🐂', 'Bull'],
+    ['mare', 'فَرَسٌ', 'Mare', '🐎', 'Mare'],
+    ['teacher-f', 'مُعَلِّمَةٌ', 'Teacher (female)', '👩‍🏫', 'file:RIVKA TEACHING IMMIGRANT CHILDREN AT MOSHAV MENUHA.jpg'],
+    ['doctor-f', 'طَبِيبَةٌ', 'Doctor (female)', '👩‍⚕️', 'commons:female doctor stethoscope'],
   ]);
 
   // ───────────── Tier 2: more everyday words ─────────────
@@ -286,4 +297,33 @@ window.WORDS = [];
     ['hammer', 'مِطْرَقَةٌ', 'Hammer', '🔨', 'commons:claw hammer'],
     ['umbrella', 'مِظَلَّةٌ', 'Umbrella', '☂️'],
   ]);
+  add(2, 'gender', [
+    ['rooster', 'دِيكٌ', 'Rooster', '🐓', 'file:Rooster crowing nsw.jpg'],
+    ['shecamel', 'نَاقَةٌ', 'She-camel', '🐪', 'file:20150115 SB Yemen IMG 8130.jpg'],
+    ['elephant-f', 'فِيلَةٌ', 'Elephant (female)', '🐘', 'commons:elephant mother calf'],
+    ['monkey-f', 'قِرْدَةٌ', 'Monkey (female)', '🐒', 'commons:monkey mother baby'],
+    ['ram', 'كَبْشٌ', 'Ram', '🐏', 'commons:ram sheep horns'],
+    ['ewe', 'نَعْجَةٌ', 'Ewe', '🐑', 'file:Ewe and Lambs - geograph.org.uk - 758956.jpg'],
+    ['nurse-m', 'مُمَرِّضٌ', 'Nurse (male)', '👨‍⚕️', 'file:Nurse Abram.jpg'],
+    ['student-f', 'طَالِبَةٌ', 'Student (female)', '👩‍🎓', 'file:Schoolgirls in Bamozai.JPG'],
+    ['friend-f', 'صَدِيقَةٌ', 'Friend (female)', '👭', 'file:Two little Lao girls hugging.jpg'],
+    ['child-f', 'طِفْلَةٌ', 'Child (female)', '👧', 'commons:little girl smiling'],
+  ]);
+
+  // Male ↔ female pairs. The new-word card shows the partner, and these words also get a
+  // "مُذَكَّرٌ أَمْ مُؤَنَّثٌ؟" game.
+  var GENDER_PAIRS = [
+    ['cat', 'cat-f'], ['dog', 'dog-f'], ['lion', 'lioness'], ['bull', 'cow'], ['horse', 'mare'],
+    ['teacher', 'teacher-f'], ['doctor', 'doctor-f'], ['rooster', 'hen'], ['camel', 'shecamel'],
+    ['elephant', 'elephant-f'], ['monkey', 'monkey-f'], ['ram', 'ewe'], ['nurse-m', 'nurse'],
+    ['student', 'student-f'], ['friend', 'friend-f'], ['child', 'child-f'], ['boy', 'girl'], ['man', 'woman'],
+    ['father', 'mother'], ['grandfather', 'grandmother'], ['brother', 'sister'],
+  ];
+  var byId = {};
+  WORDS.forEach(function (w) { byId[w.id] = w; });
+  GENDER_PAIRS.forEach(function (pr) {
+    var m = byId[pr[0]], f = byId[pr[1]];
+    m.g = 'm'; m.pair = f.id;
+    f.g = 'f'; f.pair = m.id;
+  });
 })();

@@ -124,9 +124,22 @@ window.Session = (function () {
       englishHint(word),
       ra.el,
       tiles,
+      pairCard(word),
       h('div.actions', nextButton(next))));
     var t = setTimeout(function () { ra.listen(false); }, 450);
     return function () { clearTimeout(t); ra.destroy(); };
+  }
+
+  // Male ↔ female partner of a word (e.g. قِطٌّ / قِطَّةٌ); tap either side to hear it.
+  function pairCard(word) {
+    var other = word.pair && W[word.pair];
+    if (!other) return null;
+    var m = word.g === 'm' ? word : other, f = word.g === 'f' ? word : other;
+    function side(w, label) {
+      return h('button.pair-side.' + w.g + (w.id === word.id ? '.on' : ''), { onclick: function () { Voice.play('w:' + w.id, w.ar); } },
+        UI.arabic(label, { cls: 'chipt' }), UI.picture(w, 'tiny'), UI.arabic(w.ar, { cls: 'small' }));
+    }
+    return h('div.pair', side(m, 'مُذَكَّرٌ'), side(f, 'مُؤَنَّثٌ'));
   }
 
   // ── word games ──
@@ -136,7 +149,7 @@ window.Session = (function () {
     var answered = false;
     var timers = [];
     var card = h('div.card.quiz');
-    var options = h('div.options.' + (q.type === 'word2pic' ? 'pics' : q.type === 'missing' ? 'letters' : 'words'));
+    var options = h('div.options.' + ({ word2pic: 'pics', missing: 'letters', gender: 'genders' }[q.type] || 'words'));
     var actions = h('div.actions');
     var wordEl = null;
 
@@ -205,6 +218,17 @@ window.Session = (function () {
         var b = h('button.opt.pic-opt', UI.picture(W[id], 'popt'));
         b.dataset.id = id;
         b.onclick = function () { finish(id === q.answer, b, options.querySelector('[data-id="' + q.answer + '"]')); };
+        options.appendChild(b);
+      });
+    } else if (q.type === 'gender') {
+      card.appendChild(prompt('gender'));
+      card.appendChild(UI.picture(word, 'mid'));
+      wordEl = UI.arabic(word.ar, { cls: 'huge' });
+      card.appendChild(h('div.read-box', wordEl));
+      [['m', 'مُذَكَّرٌ', '👦'], ['f', 'مُؤَنَّثٌ', '👧']].forEach(function (o) {
+        var b = h('button.opt.gender-opt.' + o[0], h('span.g-icon', o[2]), UI.arabic(o[1], { cls: 'optw' }));
+        b.dataset.g = o[0];
+        b.onclick = function () { finish(o[0] === q.answer, b, options.querySelector('[data-g="' + q.answer + '"]')); };
         options.appendChild(b);
       });
     } else if (q.type === 'missing') {
@@ -285,7 +309,7 @@ window.Session = (function () {
     p.stars += S.stars;
     if (S.mode === 'daily') {
       Curriculum.finishDay(p, {
-        newWords: S.plan.newWords, quiz: S.quiz, reading: readAvg, readCount: readScores.length,
+        newWords: S.plan.newWords, sentences: S.plan.sentences, quiz: S.quiz, reading: readAvg, readCount: readScores.length,
         secs: Math.round((Date.now() - S.startedAt) / 1000), stars: S.stars, review: S.plan.review,
       });
     } else {
@@ -306,7 +330,9 @@ window.Session = (function () {
       learnedToday.length ? h('div.learned-row', learnedToday.map(function (w) {
         return h('button.mini-word', { onclick: function () { Voice.play('w:' + w.id, w.ar); } }, UI.picture(w, 'tiny'), UI.arabic(w.ar, { cls: 'small' }));
       })) : null,
-      h('div.actions', h('button.btn.btn-primary.btn-xl', { onclick: function () { App.go('home'); } }, '🏠 الرَّئِيسِيَّةُ'))));
+      h('div.actions',
+        S.mode === 'daily' ? h('button.btn.btn-secondary.btn-xl', { onclick: function () { Worksheet.open(Worksheet.todaySet(Store.get())); } }, '✍️ ', UI.arabic('وَرَقَةُ الْكِتَابَةِ', { cls: 'btn-ar' })) : null,
+        h('button.btn.btn-primary.btn-xl', { onclick: function () { App.go('home'); } }, '🏠 الرَّئِيسِيَّةُ'))));
   }
 
   return { start: start };

@@ -213,23 +213,33 @@ window.UI = (function () {
       return Voice.play(opts.key, opts.text, { el: textEl, tiles: opts.tiles, slow: slow });
     }
 
+    function message(ar, en) {
+      feedback.innerHTML = '';
+      if (ar) feedback.appendChild(h('p.msg', ar));
+      if (en) feedback.appendChild(h('p.hint-en', en));
+    }
+
     function startMic() {
       Voice.stop();
-      if (!Listener.supported) {
-        feedback.innerHTML = '';
-        feedback.appendChild(h('p.hint-en', 'Speech checking needs Google Chrome. You can still listen and read along.'));
+      Recordings.stop();
+      if (!Listener.supported && !Listener.canRecord) {
+        message(null, 'Speech checking needs Google Chrome. You can still listen and read along.');
         if (opts.onResult) opts.onResult(null, ++attempts);
         return;
       }
       clearAssessment(textEl);
+      var level = h('i');
       feedback.innerHTML = '';
       feedback.appendChild(h('div.listening-note', h('span.pulse'), ' أَنَا أَسْتَمِعُ... اقْرَأِ الْآنَ'));
+      feedback.appendChild(h('div.level', level));
       setBusy('mic');
       var words = Arabic.splitWords(opts.text).length;
       session = Listener.listen({
         lang: settings.recLang,
-        silenceMs: words <= 2 ? 2200 : 3200,
+        silenceMs: words <= 2 ? 2000 : 3000,
+        maxMs: words <= 2 ? 15000 : 45000,
         isComplete: function (c) { return Arabic.assessBest(opts.text, c).score === 100; },
+        onLevel: function (v) { level.style.width = Math.round(v * 100) + '%'; },
         onUpdate: function (c) {
           // live follow-along: words light up as they are recognised
           var r = Arabic.assessBest(opts.text, c);
@@ -238,17 +248,28 @@ window.UI = (function () {
         onDone: function (res) {
           session = null;
           setBusy('idle');
-          if (res.error && Listener.message(res.error)) {
-            feedback.innerHTML = '';
-            feedback.appendChild(h('p.hint-en', Listener.message(res.error)));
+          var result = res.heard ? Arabic.assessBest(opts.text, res.candidates) : null;
+          // keep his voice for the parent whenever he actually said something
+          if (res.audio && (res.heard || res.voiced)) {
+            Recordings.save({
+              key: opts.key, text: opts.text, day: Store.get().day, ms: res.ms,
+              score: result ? result.score : null, heard: result ? result.transcript : '',
+            }, res.audio);
+          }
+          if (res.error && Listener.message(res.error) && !result) {
+            message(null, Listener.message(res.error));
+            if (res.error === 'network' && opts.onResult) opts.onResult(null, ++attempts);
             return;
           }
-          if (!res.heard) {
-            feedback.innerHTML = '';
-            feedback.appendChild(h('p.msg', 'لَمْ أَسْمَعْكَ. اضْغَطْ عَلَى الْمَيْكْرُوفُونِ وَاقْرَأْ بِصَوْتٍ عَالٍ.'));
+          if (!result) {
+            if (res.voiced && Listener.supported) message('سَمِعْتُ صَوْتَكَ، لَكِنْ لَمْ أَفْهَمْ. اقْتَرِبْ وَاقْرَأْ بِوُضُوحٍ.');
+            else if (res.voiced) {
+              message('أَحْسَنْتَ! 👍', 'Recorded for the parent. Speech checking needs Google Chrome.');
+              if (opts.onResult) opts.onResult(null, ++attempts);
+            } else message('لَمْ أَسْمَعْكَ. اضْغَطْ عَلَى الْمَيْكْرُوفُونِ وَاقْرَأْ بِصَوْتٍ عَالٍ.',
+              res.ms > 3000 ? 'The microphone picked up no sound. Check that the right microphone is selected and not muted.' : null);
             return;
           }
-          var result = Arabic.assessBest(opts.text, res.candidates);
           attempts++;
           paintAssessment(textEl, result);
           showResult(result);

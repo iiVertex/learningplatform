@@ -183,7 +183,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .plan-row.special { background: #fff1c2; border-color: #f3d27a; }
 .btn-start { font-size: 30px; padding: 14px 54px; animation: breathe 2.4s ease-in-out infinite; }
 @keyframes breathe { 50% { transform: scale(1.04); } }
-.tiles-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; direction: rtl; }
+.tiles-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; direction: rtl; }
 .tile-btn { background: #fff; border: 2px solid var(--line); border-radius: 22px; padding: 14px 6px 8px; box-shadow: 0 5px 0 #eadfca; display: flex; flex-direction: column; align-items: center; }
 .tile-icon { font-size: 44px; }
 .parent-link { display: block; margin: 26px auto 0; background: none; border: none; color: var(--muted); font-size: 15px; text-decoration: underline; }
@@ -280,8 +280,33 @@ button { font: inherit; color: inherit; cursor: pointer; }
 @media (max-width: 560px) {
   .card { padding: 16px 12px; }
   .section-chip { display: none; }
-  .tiles-row { gap: 8px; }
+  .tiles-row { gap: 8px; grid-template-columns: repeat(2, 1fr); }
   .options.words { grid-template-columns: 1fr; }
   .options.pics { grid-template-columns: repeat(2, 1fr); }
   .pic-opt { height: 120px; }
 }
+
+/* ───────── microphone level, gender pairs & game, parents' voice tab ───────── */
+.level { width: min(260px, 70%); height: 10px; margin: 8px auto 0; background: #f1e7d6; border-radius: 99px; overflow: hidden; }
+.level i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #6bcb77, #16a34a); border-radius: 99px; transition: width .08s; }
+.p-mic-out .level { margin: 8px 0; }
+.p-mic-out div { margin: 3px 0; }
+
+.pair { display: flex; gap: 12px; justify-content: center; margin: 6px 0 4px; direction: rtl; }
+.pair-side { background: #fff; border: 2px solid var(--line); border-radius: 18px; padding: 4px 10px 6px; display: flex; flex-direction: column; align-items: center; min-width: 120px; opacity: .75; }
+.pair-side.on { opacity: 1; border-width: 3px; }
+.pair-side.m.on { border-color: #4d96ff; background: #eef5ff; }
+.pair-side.f.on { border-color: #ff6fa8; background: #fff0f6; }
+.pair-side.m .chipt { color: #2f6fed; }
+.pair-side.f .chipt { color: #d6336c; }
+
+.options.genders { grid-template-columns: 1fr 1fr; max-width: 520px; margin-inline: auto; }
+.gender-opt { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.gender-opt .g-icon { font-size: 34px; }
+.gender-opt.m { border-color: #bcd5ff; }
+.gender-opt.f { border-color: #ffc6dc; }
+
+.pin { font-size: 28px; text-align: center; letter-spacing: 10px; }
+.btn-voice { background: #e8f7ec; white-space: nowrap; }
+.voice-slot .btn { white-space: nowrap; }
+.card.finish .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }

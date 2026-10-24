@@ -38,13 +38,13 @@ window.App = (function () {
     var box = h('div.card.onboard', { dir: 'ltr' },
       h('div.logo', '📖🌱'),
       h('h1.en', 'Welcome to the Reading Journey'),
-      h('p.en', 'A 6-month daily program (about 15–20 minutes a day) to build Arabic vocabulary and reading: picture words with fully-vowelled audio, word games, and reading aloud with letter-by-letter feedback.'),
+      h('p.en', 'A 6-month daily program (about 20–30 minutes a day) to build Arabic vocabulary and reading: picture words with fully-vowelled audio, word games, and reading aloud with letter-by-letter feedback.'),
       h('label.en', 'Child\'s name (in Arabic)'), name,
       h('label.en', 'Voice'), h('div.row', voiceBtn('f', '👩 Female voice'), voiceBtn('m', '👨 Male voice')),
       h('ul.en.tips',
         h('li', 'Use Google Chrome for the reading check, and allow the microphone when asked.'),
         h('li', 'One session per day keeps the habit; the plan adapts if a day is missed.'),
-        h('li', 'The Parents area (bottom of the home screen) shows progress and settings.')),
+        h('li', 'The Parents area (bottom of the home screen, password 1933) shows progress, his voice recordings and settings.')),
       h('button.btn.btn-primary.btn-xl', {
         onclick: function () {
           p.profile.name = name.value.trim();
@@ -103,6 +103,10 @@ window.App = (function () {
       tile('🎤', 'أَقْرَأُ أَكْثَرَ', function () {
         if (!Curriculum.learnedIds(p).length) { UI.toast('ابْدَأْ تَمْرِينَ الْيَوْمِ أَوَّلًا'); return; }
         go('session', 'reading');
+      }),
+      tile('✍️', 'أَكْتُبُ', function () {
+        Voice.play('u:write', PHRASES.write);
+        Worksheet.open(Worksheet.todaySet(Store.get()));
       }));
 
     var journey = journeyBar(p);

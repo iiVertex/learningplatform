@@ -3,19 +3,20 @@
 window.Curriculum = (function () {
   var TOTAL_DAYS = 182;
   var STAGES = [
-    { n: 1, from: 1, to: 4, icon: '🌱', ar: 'الْبِذْرَةُ', en: 'Seed', newPerDay: 3, level: 1, reviewMax: 6, read: 4, options: 3,
+    { n: 1, from: 1, to: 4, icon: '🌱', ar: 'الْبِذْرَةُ', en: 'Seed', newPerDay: 10, level: 1, reviewMax: 10, read: 5, options: 3,
       goal: 'Short concrete words; 2–3 word sentences. Build confidence decoding letters with harakat.' },
-    { n: 2, from: 5, to: 9, icon: '🌿', ar: 'الْبُرْعُمُ', en: 'Sprout', newPerDay: 4, level: 2, reviewMax: 8, read: 5, options: 4,
+    { n: 2, from: 5, to: 9, icon: '🌿', ar: 'الْبُرْعُمُ', en: 'Sprout', newPerDay: 10, level: 2, reviewMax: 12, read: 5, options: 4,
       goal: 'More sectors, colours and longer words; 3–5 word sentences.' },
-    { n: 3, from: 10, to: 16, icon: '🪴', ar: 'الْغُصْنُ', en: 'Branch', newPerDay: 4, level: 3, reviewMax: 8, read: 5, options: 4,
+    { n: 3, from: 10, to: 16, icon: '🪴', ar: 'الْغُصْنُ', en: 'Branch', newPerDay: 10, level: 3, reviewMax: 12, read: 5, options: 4,
       goal: 'Verbs, adjectives and abstract words; 5–8 word sentences.' },
-    { n: 4, from: 17, to: 22, icon: '🌳', ar: 'الشَّجَرَةُ', en: 'Tree', newPerDay: 4, level: 4, reviewMax: 10, read: 6, options: 4,
+    { n: 4, from: 17, to: 22, icon: '🌳', ar: 'الشَّجَرَةُ', en: 'Tree', newPerDay: 10, level: 4, reviewMax: 12, read: 5, options: 4,
       goal: 'Sentences with two ideas (8–12 words); reading with fluency.' },
-    { n: 5, from: 23, to: 26, icon: '🍎', ar: 'الثَّمَرَةُ', en: 'Fruit', newPerDay: 3, level: 5, reviewMax: 10, read: 4, options: 4,
+    { n: 5, from: 23, to: 26, icon: '🍎', ar: 'الثَّمَرَةُ', en: 'Fruit', newPerDay: 10, level: 5, reviewMax: 12, read: 5, options: 4,
       goal: 'Short paragraphs and mini stories; reading for meaning.' },
   ];
   // Leitner box → sessions until next review. Box 5+ counts as "mastered".
   var INTERVALS = [0, 1, 2, 4, 7, 14, 30];
+  var PLAN_V = 2; // bump when the shape of a day changes, so a saved half-done plan is rebuilt
 
   var wordById = {};
   WORDS.forEach(function (w) { wordById[w.id] = w; });
@@ -35,24 +36,26 @@ window.Curriculum = (function () {
     return a;
   }
 
-  // Next unlearned words: lowest tier first, one category per day, rotating through categories.
+  // Next unlearned words: lowest tier first, in themed blocks — a whole category at a time, rotating through
+  // the categories, topping up from the next category (or the next tier) until k words are picked.
   function pickNewWords(p, k) {
     var unlearned = WORDS.filter(function (w) { return !p.words[w.id]; });
-    if (!unlearned.length) return { ids: [], cursor: p.catCursor };
-    var tier = Math.min.apply(null, unlearned.map(function (w) { return w.tier; }));
-    var pool = unlearned.filter(function (w) { return w.tier === tier; });
     var cats = CATEGORIES.map(function (c) { return c.id; });
     var picked = [], cursor = p.catCursor % cats.length;
-    for (var step = 0; step < cats.length && picked.length < k; step++) {
-      var ci = (cursor + step) % cats.length;
-      var inCat = pool.filter(function (w) { return w.cat === cats[ci] && picked.indexOf(w.id) < 0; });
-      if (!inCat.length) continue;
-      inCat.slice(0, k - picked.length).forEach(function (w) { picked.push(w.id); });
-      cursor = ci + 1;
-      // keep the day themed: only top up from the next category when this one had a single word left
-      if (picked.length >= Math.min(2, k)) break;
-    }
-    return { ids: picked, cursor: cursor % cats.length };
+    var tiers = unlearned.map(function (w) { return w.tier; }).filter(function (t, i, a) { return a.indexOf(t) === i; }).sort();
+    tiers.forEach(function (tier) {
+      var pool = unlearned.filter(function (w) { return w.tier === tier; });
+      for (var step = 0; step < cats.length && picked.length < k; step++) {
+        var ci = (cursor + step) % cats.length;
+        var inCat = pool.filter(function (w) { return w.cat === cats[ci] && picked.indexOf(w.id) < 0; });
+        if (!inCat.length) continue;
+        var took = inCat.slice(0, k - picked.length);
+        took.forEach(function (w) { picked.push(w.id); });
+        // only move past a category once it has been used up for this tier
+        cursor = took.length === inCat.length ? (ci + 1) % cats.length : ci;
+      }
+    });
+    return { ids: picked, cursor: cursor };
   }
 
   function dueWords(p, day) {
@@ -75,7 +78,9 @@ window.Curriculum = (function () {
       var unread = list.filter(function (s) { return !p.sentences[s.id]; });
       return unread[0] || list[0];
     }
-    newIds.forEach(function (id) { take(bestFor(id)); });
+    // spread over the day's words (both themes) rather than only the first few
+    var spread = newIds.filter(function (_, i) { return i % 2 === 0; }).concat(newIds.filter(function (_, i) { return i % 2 === 1; }));
+    spread.forEach(function (id) { take(bestFor(id)); });
     var pool = SENTENCES.filter(function (s) { return known[s.w] && s.level <= level; });
     shuffle(pool.filter(function (s) { return !p.sentences[s.id]; }))
       .sort(function (a, b) { return b.level - a.level; }).forEach(take);
@@ -97,7 +102,8 @@ window.Curriculum = (function () {
     var tNorm = Arabic.normalize(target.ar);
     var learned = learnedIds(p).map(function (id) { return wordById[id]; });
     var all = WORDS.filter(function (w) { return w.tier <= target.tier + 1; });
-    function ok(w) { return w.id !== target.id && Arabic.normalize(w.ar) !== tNorm; }
+    // never offer the male/female partner as a wrong answer: its picture looks the same
+    function ok(w) { return w.id !== target.id && w.id !== target.pair && Arabic.normalize(w.ar) !== tNorm; }
     var first = Arabic.normalize(target.ar)[0];
     // prefer words he has seen that look alike (same first letter) or share a category, then anything else
     var ranked = shuffle(learned.filter(ok)).sort(function (a, b) {
@@ -135,6 +141,7 @@ window.Curriculum = (function () {
 
   function quizItem(type, word, p, nOptions) {
     var item = { type: type, word: word.id };
+    if (type === 'gender') { item.options = ['m', 'f']; item.answer = word.g; return item; }
     if (type === 'missing') {
       var m = makeMissing(word);
       if (!m) type = item.type = 'pic2word';
@@ -149,11 +156,16 @@ window.Curriculum = (function () {
     var types = ['pic2word', 'word2pic', 'audio2word'];
     if (stage.n >= 2) types.push('missing');
     var items = [];
-    reviewIds.forEach(function (id) { items.push(quizItem(shuffle(types)[0], wordById[id], p, stage.options)); });
+    reviewIds.forEach(function (id) {
+      var w = wordById[id];
+      items.push(quizItem(shuffle(w.g ? types.concat(['gender']) : types)[0], w, p, stage.options));
+    });
     var review = shuffle(items);
     var fresh = [];
     newIds.forEach(function (id) {
       var t = shuffle(types);
+      // words from the male & female sector always get one "مُذَكَّرٌ أَمْ مُؤَنَّثٌ؟" question
+      if (wordById[id].cat === 'gender') t[1] = 'gender';
       fresh.push(quizItem(t[0], wordById[id], p, stage.options));
       fresh.push(quizItem(t[1], wordById[id], p, stage.options));
     });
@@ -171,14 +183,14 @@ window.Curriculum = (function () {
   // Build (or resume) the plan for the next daily session.
   function planToday(p) {
     var day = p.day;
-    if (p.pending && p.pending.day === day) return hydrate(p, p.pending);
+    if (p.pending && p.pending.day === day && p.pending.v === PLAN_V) return hydrate(p, p.pending);
     var stage = stageFor(day);
     var review = isReviewDay(day);
-    var plan = { day: day, review: review, newWords: [], reviewWords: [], cursor: p.catCursor };
+    var plan = { v: PLAN_V, day: day, review: review, newWords: [], reviewWords: [], cursor: p.catCursor };
     if (review) {
       var recent = learnedIds(p).filter(function (id) { return p.words[id].learnedDay > day - 7; });
       var due = dueWords(p, day);
-      plan.reviewWords = shuffle(recent).concat(due.filter(function (id) { return recent.indexOf(id) < 0; })).slice(0, 16);
+      plan.reviewWords = shuffle(recent).concat(due.filter(function (id) { return recent.indexOf(id) < 0; })).slice(0, 20);
     } else {
       var picked = pickNewWords(p, stage.newPerDay);
       plan.newWords = picked.ids;
@@ -244,7 +256,7 @@ window.Curriculum = (function () {
   return {
     TOTAL_DAYS: TOTAL_DAYS, STAGES: STAGES, wordById: wordById, sentencesByWord: sentencesByWord,
     weekOf: weekOf, stageFor: stageFor, isReviewDay: isReviewDay, planToday: planToday, introduce: introduce,
-    grade: grade, finishDay: finishDay, streakAlive: streakAlive, stats: stats, shuffle: shuffle, learnedIds: learnedIds,
+    grade: grade, finishDay: finishDay, pickSentences: pickSentences, streakAlive: streakAlive, stats: stats, shuffle: shuffle, learnedIds: learnedIds,
     sentenceById: function (id) { return SENTENCES.filter(function (s) { return s.id === id; })[0]; },
   };
 })();

@@ -2,6 +2,7 @@
 window.CATEGORIES = [
   { id: 'animals', ar: 'الْحَيَوَانَاتُ', en: 'Animals', icon: '🐾' },
   { id: 'family', ar: 'الْعَائِلَةُ وَالنَّاسُ', en: 'Family & people', icon: '👨‍👩‍👧' },
+  { id: 'gender', ar: 'الْمُذَكَّرُ وَالْمُؤَنَّثُ', en: 'Male & female', icon: '👫' },
   { id: 'body', ar: 'جِسْمِي', en: 'My body', icon: '✋' },
   { id: 'home', ar: 'الْبَيْتُ', en: 'Home', icon: '🏠' },
   { id: 'appliances', ar: 'أَجْهِزَةُ الْبَيْتِ', en: 'Home appliances', icon: '🔌' },

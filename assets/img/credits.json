@@ -963,5 +963,90 @@
   "src": "commons:fishermen boat nets",
   "url": "(picked from candidates)",
   "page": null
+ },
+ "cat-f": {
+  "src": "file:Siberian black tabby blotched cat 04.jpg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Siberian_black_tabby_blotched_cat_04.jpg/960px-Siberian_black_tabby_blotched_cat_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Siberian_black_tabby_blotched_cat_04.jpg"
+ },
+ "dog-f": {
+  "src": "commons:mother dog with puppies",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Bernese-newfoundland-mother-feeding-puppies-meath-ireland.jpg/960px-Bernese-newfoundland-mother-feeding-puppies-meath-ireland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Bernese-newfoundland-mother-feeding-puppies-meath-ireland.jpg"
+ },
+ "lioness": {
+  "src": "commons:lioness portrait",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Portrait_of_a_lioness.jpg/960px-Portrait_of_a_lioness.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_lioness.jpg"
+ },
+ "bull": {
+  "src": "Bull",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/A_Friesian_Bull%2C_Llandeilo_Graban_-_geograph.org.uk_-_579885.jpg/640px-A_Friesian_Bull%2C_Llandeilo_Graban_-_geograph.org.uk_-_579885.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Bull"
+ },
+ "mare": {
+  "src": "Mare",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Lovely_Little_Girl.jpg/640px-Lovely_Little_Girl.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "page": "https://en.wikipedia.org/wiki/Mare"
+ },
+ "teacher-f": {
+  "src": "file:RIVKA TEACHING IMMIGRANT CHILDREN AT MOSHAV MENUHA.jpg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/RIVKA_TEACHING_IMMIGRANT_CHILDREN_AT_MOSHAV_MENUHA.jpg/960px-RIVKA_TEACHING_IMMIGRANT_CHILDREN_AT_MOSHAV_MENUHA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:RIVKA_TEACHING_IMMIGRANT_CHILDREN_AT_MOSHAV_MENUHA.jpg"
+ },
+ "doctor-f": {
+  "src": "commons:female doctor stethoscope",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Young_female_doctor_showing_stethoscope_closeup.jpg/960px-Young_female_doctor_showing_stethoscope_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Young_female_doctor_showing_stethoscope_closeup.jpg"
+ },
+ "rooster": {
+  "src": "file:Rooster crowing nsw.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Rooster_crowing_nsw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Rooster_crowing_nsw.jpg"
+ },
+ "shecamel": {
+  "src": "file:20150115 SB Yemen IMG 8130.jpg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/20150115_SB_Yemen_IMG_8130.jpg/960px-20150115_SB_Yemen_IMG_8130.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:20150115_SB_Yemen_IMG_8130.jpg"
+ },
+ "elephant-f": {
+  "src": "commons:elephant mother calf",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Mother_Calf_African_Bush_Elephant_Kafue_Jul23_A7C_05569.jpg/960px-Mother_Calf_African_Bush_Elephant_Kafue_Jul23_A7C_05569.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Mother_Calf_African_Bush_Elephant_Kafue_Jul23_A7C_05569.jpg"
+ },
+ "monkey-f": {
+  "src": "commons:monkey mother baby",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Mother_monkey_protecting_baby_-_oct_2024.jpg/960px-Mother_monkey_protecting_baby_-_oct_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Mother_monkey_protecting_baby_-_oct_2024.jpg"
+ },
+ "ram": {
+  "src": "commons:ram sheep horns",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Ram_with_horn_attachment_-_geograph.org.uk_-_4518253.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Ram_with_horn_attachment_-_geograph.org.uk_-_4518253.jpg"
+ },
+ "ewe": {
+  "src": "file:Ewe and Lambs - geograph.org.uk - 758956.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Ewe_and_Lambs_-_geograph.org.uk_-_758956.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Ewe_and_Lambs_-_geograph.org.uk_-_758956.jpg"
+ },
+ "nurse-m": {
+  "src": "file:Nurse Abram.jpg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Nurse_Abram.jpg/960px-Nurse_Abram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Nurse_Abram.jpg"
+ },
+ "student-f": {
+  "src": "file:Schoolgirls in Bamozai.JPG",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Schoolgirls_in_Bamozai.JPG/960px-Schoolgirls_in_Bamozai.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Schoolgirls_in_Bamozai.JPG"
+ },
+ "friend-f": {
+  "src": "file:Two little Lao girls hugging.jpg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Two_little_Lao_girls_hugging.jpg/960px-Two_little_Lao_girls_hugging.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Two_little_Lao_girls_hugging.jpg"
+ },
+ "child-f": {
+  "src": "commons:little girl smiling",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Smiling_girl_holding_a_lotus_flower.jpg/960px-Smiling_girl_holding_a_lotus_flower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Smiling_girl_holding_a_lotus_flower.jpg"
  }
 }

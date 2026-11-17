@@ -42,8 +42,13 @@ Recordings stay in this browser and are not part of the backup file.
 | 🌳 4 Tree | 17–22 | 10 | 8–12 words |
 | 🍎 5 Fruit | 23–26 | 10 | short paragraphs |
 
-**Content status:** 217 words across 18 sectors and 217 sentences are ready. At 10 new words a day they last
-about 25 program days (~4 weeks); after that the days are review-only until more words are added.
+**Harder reading (default):** every word also has a level-3 sentence of 5–8 words with prepositions of place
+(فَوْقَ، تَحْتَ، بِجَانِبِ، أَمَامَ، خَلْفَ، بَيْنَ، حَوْلَ ...) and quantities (ثَلَاثَةُ أَقْلَامٍ، خَمْسُ تُفَّاحَاتٍ، مَرَّتَيْنِ، نِصْفَ سَاعَةٍ ...).
+Parents → Settings → *Reading sentences* picks **Harder** (these sentences from day 1) or **Standard** (follow the
+stage table above). Changing it never touches progress; a half-done day only swaps its sentences.
+
+**Content status:** 217 words across 18 sectors and 434 sentences (217 short + 217 level-3) are ready. At 10 new words a day
+the words last about 25 program days (~4 weeks); after that the days are review-only until more words are added.
 Stages 3–5 (verbs, adjectives, longer sentences, short stories) are the next batch to add.
 
 ## Adding or editing content

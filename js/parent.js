@@ -325,6 +325,8 @@ window.Parent = (function () {
       field('Microphone', h('div', micBtn, micOut)),
       field('Show English meaning', toggle(s.englishHints, function (v) { s.englishHints = v; }), 'Off by default so he connects the Arabic word straight to the picture.'),
       field('Allow more than one session per day', toggle(s.multiPerDay, function (v) { s.multiPerDay = v; }), 'Off keeps a steady daily rhythm. Extra practice is always available after the daily session.'),
+      field('Reading sentences', select(s.minReadLevel || 0, [[3, 'Harder: 5–8 words, with prepositions & numbers'], [0, 'Standard: follow the plan (2–3 words in stage 1)']], function (v) { s.minReadLevel = +v; }),
+        'Harder adds where things are (فَوْقَ، تَحْتَ، بِجَانِبِ ...) and how many (ثَلَاثَةُ أَقْلَامٍ ...). Applies from the next reading; words and games are not affected.'),
       field('Placement', jump, 'If stage 1 is too easy, skip ahead. Earlier words are marked as known and still come back in reviews.'),
       field('Backup', h('div.row',
         h('button.btn', { onclick: exportData }, 'Download backup'),

@@ -41,11 +41,12 @@ window.Worksheet = (function () {
     var words = set.words.filter(function (id) { return W[id]; });
     var learned = Curriculum.learnedIds(p).sort(function (a, b) { return p.words[a].box - p.words[b].box || p.words[b].learnedDay - p.words[a].learnedDay; });
     learned.forEach(function (id) { if (words.length < WORDS_PER_SHEET && words.indexOf(id) < 0) words.push(id); });
-    var level = Curriculum.stageFor(Math.max(1, set.day)).level;
+    var level = Curriculum.readLevel(Math.max(1, set.day));
     var sentences = set.sentences.filter(function (id) { return Curriculum.sentenceById(id); });
     words.forEach(function (id) {
       if (sentences.length >= SENTENCES_PER_SHEET) return;
-      var s = (Curriculum.sentencesByWord[id] || []).filter(function (x) { return x.level <= level && sentences.indexOf(x.id) < 0; })[0];
+      var s = (Curriculum.sentencesByWord[id] || []).filter(function (x) { return x.level <= level && sentences.indexOf(x.id) < 0; })
+        .sort(function (a, b) { return b.level - a.level; })[0];
       if (s) sentences.push(s.id);
     });
     set.words = words.slice(0, WORDS_PER_SHEET);

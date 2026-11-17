@@ -14,7 +14,7 @@ window.Store = (function () {
     return {
       version: 1,
       profile: { name: '', created: today() },
-      settings: { voice: 'f', speed: 1, recLang: 'ar-SA', englishHints: false, multiPerDay: false },
+      settings: { voice: 'f', speed: 1, recLang: 'ar-SA', englishHints: false, multiPerDay: false, minReadLevel: 3 },
       day: 1,               // the next daily session to do (1 … 182 for the 6-month plan)
       lastSessionDate: null,
       streak: 0,
@@ -50,7 +50,12 @@ window.Store = (function () {
     save: save,
     get: function () { return state || load(); },
     reset: function () { state = fresh(); save(); return state; },
-    replace: function (obj) { state = Object.assign(fresh(), obj); save(); return state; },
+    replace: function (obj) {
+      state = Object.assign(fresh(), obj);
+      state.settings = Object.assign(fresh().settings, state.settings);
+      save();
+      return state;
+    },
     today: today,
     daysBetween: daysBetween,
   };

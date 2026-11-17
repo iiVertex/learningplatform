@@ -29,6 +29,12 @@ window.Curriculum = (function () {
     return STAGES.filter(function (s) { return wk >= s.from && wk <= s.to; })[0] || STAGES[STAGES.length - 1];
   }
   function isReviewDay(day) { return day % 7 === 0; }
+  // Sentence level read on a day: the stage's level, raised to the minimum chosen in Parents → Settings
+  // (default 3: longer sentences with prepositions and numbers).
+  function readLevel(day) {
+    var min = +((Store.get().settings || {}).minReadLevel) || 0;
+    return Math.max(stageFor(day).level, min);
+  }
 
   function shuffle(a) {
     a = a.slice();
@@ -183,10 +189,20 @@ window.Curriculum = (function () {
   // Build (or resume) the plan for the next daily session.
   function planToday(p) {
     var day = p.day;
-    if (p.pending && p.pending.day === day && p.pending.v === PLAN_V) return hydrate(p, p.pending);
+    if (p.pending && p.pending.day === day && p.pending.v === PLAN_V) {
+      // reading difficulty changed since the plan was made: swap only the sentences, keep the words and games
+      var lvl = readLevel(day);
+      if (p.pending.readLevel !== lvl) {
+        p.pending.sentences = pickSentences(p, day, p.pending.newWords, p.pending.review ? 6 : stageFor(day).read, lvl)
+          .map(function (s) { return s.id; });
+        p.pending.readLevel = lvl;
+        Store.save();
+      }
+      return hydrate(p, p.pending);
+    }
     var stage = stageFor(day);
     var review = isReviewDay(day);
-    var plan = { v: PLAN_V, day: day, review: review, newWords: [], reviewWords: [], cursor: p.catCursor };
+    var plan = { v: PLAN_V, day: day, review: review, newWords: [], reviewWords: [], cursor: p.catCursor, readLevel: readLevel(day) };
     if (review) {
       var recent = learnedIds(p).filter(function (id) { return p.words[id].learnedDay > day - 7; });
       var due = dueWords(p, day);
@@ -200,7 +216,7 @@ window.Curriculum = (function () {
     var quiz = buildQuiz(plan.reviewWords, plan.newWords, p, stage);
     plan.quizReview = quiz.review;
     plan.quizPractice = quiz.practice;
-    plan.sentences = pickSentences(p, day, plan.newWords, review ? 6 : stage.read, stage.level).map(function (s) { return s.id; });
+    plan.sentences = pickSentences(p, day, plan.newWords, review ? 6 : stage.read, readLevel(day)).map(function (s) { return s.id; });
     p.pending = plan;
     Store.save();
     return hydrate(p, plan);
@@ -255,7 +271,7 @@ window.Curriculum = (function () {
 
   return {
     TOTAL_DAYS: TOTAL_DAYS, STAGES: STAGES, wordById: wordById, sentencesByWord: sentencesByWord,
-    weekOf: weekOf, stageFor: stageFor, isReviewDay: isReviewDay, planToday: planToday, introduce: introduce,
+    weekOf: weekOf, stageFor: stageFor, readLevel: readLevel, isReviewDay: isReviewDay, planToday: planToday, introduce: introduce,
     grade: grade, finishDay: finishDay, pickSentences: pickSentences, streakAlive: streakAlive, stats: stats, shuffle: shuffle, learnedIds: learnedIds,
     sentenceById: function (id) { return SENTENCES.filter(function (s) { return s.id === id; })[0]; },
   };

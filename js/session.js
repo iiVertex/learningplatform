@@ -37,7 +37,8 @@ window.Session = (function () {
       }
       var known = {};
       learned.forEach(function (id) { known[id] = true; });
-      var pool = SENTENCES.filter(function (s) { return known[s.w] && s.level <= stage.level; });
+      var level = Curriculum.readLevel(S.day);
+      var pool = SENTENCES.filter(function (s) { return known[s.w] && s.level <= level; });
       pool = Curriculum.shuffle(pool).sort(function (a, b) {
         var sa = p.sentences[a.id], sb = p.sentences[b.id];
         return (sa ? sa.best : -1) - (sb ? sb.best : -1);
